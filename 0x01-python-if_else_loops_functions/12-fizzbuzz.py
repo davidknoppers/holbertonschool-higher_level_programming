@@ -7,5 +7,4 @@ def fizzbuzz():
             print("Buzz", end="")
         if n % 3 != 0 and n % 5 != 0:
             print(n, end="")
-        if (n < 100):
-            print(" ", end="")
+        print(" ", end="")
