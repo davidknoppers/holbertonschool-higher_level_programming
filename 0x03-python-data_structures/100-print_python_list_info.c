@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <Python.h>
 /**
  * print_python_list_info - prints size, alloc, and elements of list
@@ -15,7 +14,7 @@ void print_python_list_info(PyObject *p)
 	alloc = ((PyListObject *)p)->allocated;
 
 	printf("[*] Size of the Python List = %d\n", size);
-	printf("[*] Allocated = %zd]\n", alloc);
+	printf("[*] Allocated = %zd\n", alloc);
 	if (PyList_Check(p))
 	{
 		for (i = 0; i < size; i++)
