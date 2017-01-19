@@ -1,0 +1,18 @@
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+>>> module_documentation = __import__("3-say_my_name").__doc__
+>>> print(len(module_documentation) > 0)
+True
+
+>>> function_documentation = __import__("3-say_my_name").say_my_name.__doc__
+>>> print(len(function_documentation) > 0)
+True
+>>> say_my_name("Holberton", "School")
+My name is Holberton School
+>>> say_my_name("Slim Shady")
+My name is Slim Shady 
+>>> say_my_name("","")
+My name is  
+>>> say_my_name(1, 2)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
