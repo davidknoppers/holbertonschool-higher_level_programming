@@ -1,0 +1,33 @@
+>>> mul = __import__('1-mul').mul
+>>> mul(0, 1)
+0
+>>> mul(2.1, 2)
+4.2
+>>> mul(None, None)
+Traceback (most recent call last):
+...
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'NoneType'
+>>> mul(11234565432123454321,123454321234565432345432)
+1386955649788113339172654187486900745011672
+>>> mul('bob', 3)
+'bobbobbob'
+>>> mul(2.1, 2.1)
+4.41
+>>> mul(float("inf"), 1)
+inf
+>>> mul(True, True)
+1
+>>> mul(False, False)
+0
+>>> mul(-1.01, 0)
+-0.0
+>>> mul(('tup', 2), 2)
+('tup', 2, 'tup', 2)
+>>> mul(1e10000, 1e100000)
+inf
+>>> mul(, 2)
+Traceback (most recent call last):
+...
+SyntaxError: invalid syntax
+>>> mul(1E+100, -3E+102)
+-2.9999999999999997e+202
