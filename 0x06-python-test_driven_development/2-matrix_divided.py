@@ -13,8 +13,10 @@ def matrix_divided(matrix, div):
     lol_error = "matrix must be a matrix (list of lists) of integers/floats"
     if matrix is None or not isinstance(matrix, list):
         raise TypeError(lol_error)
-    nested_check = any(isinstance(i, list) for i in matrix)
-    if not nested_check:
+    if len(matrix) is 0 or len(matrix[0]) is 0:
+        raise TypeError(lol_error)
+    nested_check = any(not isinstance(i, list) for i in matrix)
+    if nested_check:
         raise TypeError(lol_error)
     if type(div) is not int and type(div) is not float:
         raise TypeError('div must be a number')
