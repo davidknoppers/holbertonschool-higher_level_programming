@@ -5,6 +5,7 @@ Inputs a and b must be integers
 Floats are converted to ints before addition occurs
 """
 
+
 def add_integer(a, b):
     """
     Adds two ints and returns their result. Error-handled.
@@ -16,6 +17,3 @@ def add_integer(a, b):
     a = int(a)
     b = int(b)
     return (a + b)
-if __name__ == "__main__":
-    import doctest
-    doctest.testfile("0-add_integer.txt")
