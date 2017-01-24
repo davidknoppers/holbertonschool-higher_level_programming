@@ -1,8 +1,15 @@
 #!/usr/bin/python3
+"""
+Implementation of a basic singly linked list in Python
+Sorted lowest to highest by node value
+Offers basic print function
+"""
+
+
 class Node(object):
     def __init__(self, data, next_node=None):
         self.__data = data
-        if not isinstance(self.__data, int):
+        if not isinstance(self.__data, int) or isinstance(data, bool):
             raise TypeError('data must be an integer')
         self.__next_node = next_node
 
@@ -12,7 +19,7 @@ class Node(object):
 
     @data.setter
     def data(self, value):
-        if not isinstance(value, int):
+        if not isinstance(value, int) or isinstance(value, bool):
             raise TypeError('data must be an integer')
         self.__data = value
 
