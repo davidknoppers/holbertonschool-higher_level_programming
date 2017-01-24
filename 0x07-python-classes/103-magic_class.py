@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 import math
+"""
+MagicClass: basic bytecode for a class declaration
+"""
 
 
 class MagicClass:
