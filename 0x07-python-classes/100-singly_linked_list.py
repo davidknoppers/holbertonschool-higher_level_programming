@@ -22,9 +22,10 @@ class Node(object):
 
     @next_node.setter
     def next_node(self, value):
-        if value != None and not isinstance(value, Node):
+        if value is not None and not isinstance(value, Node):
             raise TypeError('next must be a Node object')
         self.__next_node = value
+
 
 class SinglyLinkedList(object):
     def __init__(self):
@@ -33,22 +34,25 @@ class SinglyLinkedList(object):
     def sorted_insert(self, value):
         if not self.__head:
             self.__head = Node(value, None)
-            return
         else:
             current = self.__head
             prev = None
-            while current and current.__data > current.__next_node.__data:
+            while current and value > current.data:
                 prev = current
-                current = current.__next_node
-            if current:
-                new = Node(value, current.__next)
-                prev.__next_node = new
+                current = current.next_node
+            if not current:
+                prev.next_node = Node(value)
+            elif current == self.__head:
+                self.__head = Node(value, current)
             else:
-                prev.__next_node = Node(value)
+                prev.next_node = Node(value, current)
+
     def __repr__(self):
         result = ""
-        start = self.__head
-        while start:
-            result = result + str(start.__data) + '\n'
-            start = start.__next_node
+        temp = self.__head
+        while temp:
+            result += str(temp.data)
+            temp = temp.next_node
+            if temp:
+                result += '\n'
         return result
