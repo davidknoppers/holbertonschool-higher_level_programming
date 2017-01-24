@@ -42,10 +42,18 @@ class Square(object):
                 raise TypeError(errormsg)
         self.__position = value
 
+    def string(self):
+        if self.__size == 0:
+            print("")
+        else:
+            result = ''
+            for i in range(self.__position[1]):
+                result += '\n'
+            for i in range(self.__size):
+                result += ' ' * self.__position[0] + self.__size * '#'
+                if i < self.size - 1:
+                    result += '\n'
+            return (result)
+
     def my_print(self):
-        for i in range(self.__position[1]):
-            print('\n')
-        for i in range(self.__size):
-            for j in range(self.__position[0]):
-                print(" ", end="")
-            print(self.__size * "#")
+        print(self.string())

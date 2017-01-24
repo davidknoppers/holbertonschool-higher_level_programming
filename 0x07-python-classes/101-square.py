@@ -38,19 +38,25 @@ class Square(object):
         if not isinstance(value, tuple) or len(value) != 2:
             raise TypeError(errormsg)
         for i in value:
-            if not isinstance(i, int):
+            if not isinstance(i, int) or i < 0:
                 raise TypeError(errormsg)
         self.__position = value
 
+    def string(self):
+        if self.__size == 0:
+            print("")
+        else:
+            result = ''
+            for i in range(self.__position[1]):
+                result += '\n'
+            for i in range(self.__size):
+                result += ' ' * self.__position[0] + self.__size * '#'
+                if i < self.size - 1:
+                    result += '\n'
+            return (result)
+
     def my_print(self):
-        if self.__size < 1:
-            return
-        for i in range(self.__position[1]):
-            print('\n')
-        for i in range(self.__size):
-            for j in range(self.__position[0]):
-                print(" ", end="")
-            print(self.__size * "#")
+        return (self.string())
 
     def __repr__(self):
-        return ''.format(self.my_print())
+        return(self.string())
