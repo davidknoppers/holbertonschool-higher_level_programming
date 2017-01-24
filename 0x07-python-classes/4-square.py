@@ -16,10 +16,6 @@ class Square:
         """
         initializes square with a given size or size = 0
         """
-        if type(size) is not int or type(size) is bool:
-            raise TypeError('size must be an integer')
-        if size < 0:
-            raise ValueError('size must be >= 0')
         self.size = size
 
     @property
@@ -34,7 +30,7 @@ class Square:
         """
         setter for size
         """
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError('size must be an integer')
         if value < 0:
             raise ValueError('size must be >= 0')
