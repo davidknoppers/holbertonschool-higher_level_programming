@@ -80,7 +80,7 @@ class SinglyLinkedList(object):
             else:
                 prev.next_node = Node(value, current)
 
-    def __repr__(self):
+    def __str__(self):
         """
         formats list for output
         """
