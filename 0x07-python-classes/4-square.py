@@ -16,7 +16,7 @@ class Square:
         """
         initializes square with a given size or size = 0
         """
-        if not isinstance(size, int) or isinstance(size, bool):
+        if type(size) is not int or type(size) is bool:
             raise TypeError('size must be an integer')
         if size < 0:
             raise ValueError('size must be >= 0')
@@ -40,7 +40,7 @@ class Square:
         """
         setter for size
         """
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError('size must be an integer')
         if value < 0:
             raise ValueError('size must be >= 0')
