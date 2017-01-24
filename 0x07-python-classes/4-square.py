@@ -4,6 +4,8 @@ Square -demonstrates basic components of OOP
 
 Contains Square and a few attributes
 """
+
+
 class Square:
     """
     Creates a square based on size
