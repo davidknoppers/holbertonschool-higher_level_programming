@@ -1,5 +1,15 @@
 #!/usr/bin/python3
+"""
+Most advanced square yet!
+Holds a size and position and can print using repr
+requires ints
+"""
+
+
 class Square(object):
+    """
+    basic features
+    """
     def __init__(self, size=0, position=(0, 0)):
         self.__size = size
         if not isinstance(self.__size, int):
@@ -14,14 +24,23 @@ class Square(object):
                 raise TypeError(errormsg)
 
     def area(self):
+        """
+        basic features
+        """
         return (self.__size ** 2)
 
     @property
     def size(self):
+        """
+        basic features
+        """
         return (self.__size)
 
     @size.setter
     def size(self, value):
+        """
+        basic features
+        """
         if not isinstance(value, int):
             raise TypeError('size must be an integer')
         if self.__size < 0:
@@ -30,10 +49,16 @@ class Square(object):
 
     @property
     def position(self):
+        """
+        basic features
+        """
         return (self.__position)
 
     @position.setter
     def position(self, value):
+        """
+        basic features
+        """
         errormsg = 'position must be a tuple of 2 positive integers'
         if not isinstance(value, tuple) or len(value) != 2:
             raise TypeError(errormsg)
@@ -43,6 +68,9 @@ class Square(object):
         self.__position = value
 
     def string(self):
+        """
+        strings result
+        """
         if self.__size == 0:
             print("")
         else:
@@ -56,7 +84,13 @@ class Square(object):
             return (result)
 
     def my_print(self):
+        """
+        basic features
+        """
         return (self.string())
 
     def __repr__(self):
+        """
+        basic features
+        """
         return(self.string())
