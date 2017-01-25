@@ -61,11 +61,13 @@ class Rectangle:
         if value < 0:
             raise ValueError('height must be >= 0')
         self.__height = value
+
     def area(self):
         """
         area of a rectangle
         """
         return self.__height * self.__width
+
     def perimeter(self):
         """
         perimeter of a rectangle
@@ -73,7 +75,11 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return 0
         return 2 * (self.__height + self.__width)
+
     def __str__(self):
+        """
+        builds 2d rectangle
+        """
         result = ""
         if self.__height == 0 or self.__width == 0:
             return result
@@ -82,10 +88,18 @@ class Rectangle:
             if i < self.__height - 1:
                 result += '\n'
         return result
+
     def __repr__(self):
+        """
+        simple str rep
+        """
         result = "Rectangle({}, {})".format(self.__width, self.__height)
         return result
+
     def __del__(self):
+        """
+        dels instance
+        """
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
         del self

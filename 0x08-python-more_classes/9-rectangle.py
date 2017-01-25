@@ -62,11 +62,13 @@ class Rectangle:
         if value < 0:
             raise ValueError('height must be >= 0')
         self.__height = value
+
     def area(self):
         """
         area of a rectangle
         """
         return self.__height * self.__width
+
     def perimeter(self):
         """
         perimeter of a rectangle
@@ -74,6 +76,7 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return 0
         return 2 * (self.__height + self.__width)
+
     def __str__(self):
         """
         constructs grid output for rectangle
@@ -86,12 +89,14 @@ class Rectangle:
             if i < self.__height - 1:
                 result += '\n'
         return result
+
     def __repr__(self):
         """
         formats basic text representation of rectangle
         """
         result = "Rectangle({}, {})".format(self.__width, self.__height)
         return result
+
     def __del__(self):
         """
         deletes an instance and updates class count
@@ -99,6 +104,7 @@ class Rectangle:
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
         del self
+
     def bigger_or_equal(rect_1, rect_2):
         """
         Returns the larger of the two rectangles, after input checks
@@ -110,6 +116,7 @@ class Rectangle:
         if rect_1.area() >= rect_2.area():
             return rect_1
         return rect_2
+
     @classmethod
     def square(cls, size=0):
         """
