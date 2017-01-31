@@ -12,8 +12,8 @@ class Rectangle(BaseGeometry):
         """
         init inherits from BaseGeometry
         """
-        width = super().integer_validator("width", width)
-        height = super().integer_validator("height", height)
+        super().integer_validator("width", width)
+        super().integer_validator("height", height)
         self.__width = width
         self.__height = height
 

@@ -12,7 +12,7 @@ class Rectangle(BaseGeometry):
         """
         init method inherits integer validators from previous task
         """
-        width = super().integer_validator("width", width)
-        height = super().integer_validator("height", height)
+        super().integer_validator("width", width)
+        super().integer_validator("height", height)
         self.__width = width
         self.__height = height
