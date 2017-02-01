@@ -7,6 +7,9 @@ integer_validator will be inherited by other classes
 
 
 class BaseGeometry:
+    """
+    BaseGeometry Class
+    """
     def area(self):
         """
         Intentionally unimplemented
