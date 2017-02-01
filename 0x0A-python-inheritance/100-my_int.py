@@ -16,10 +16,10 @@ class MyInt(int):
         """
         !=
         """
-        return self - other is not 0
+        return not super().__eq__(other)
 
     def __ne__(self, other):
         """
         ==
         """
-        return self - other is 0
+        return not self.__eq__(other)
