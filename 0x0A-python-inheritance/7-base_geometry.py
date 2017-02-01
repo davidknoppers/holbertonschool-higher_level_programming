@@ -18,6 +18,6 @@ class BaseGeometry:
         Validates int input
         """
         if type(value) is not int:
-            raise TypeError(str(name) + " must be an integer")
+            raise TypeError("{} must be an integer".format(name))
         if value <= 0:
-            raise ValueError(str(name) + " must be greater than 0")
+            raise ValueError("{} must be greater than 0".format(name))
