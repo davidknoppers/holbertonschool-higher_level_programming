@@ -6,6 +6,11 @@ MyInt challenges us to change the basics of an int
 
 
 class MyInt(int):
+    """
+    Reworking int to switch == and !=
+    *
+    *
+    """
     def __new__(cls, value):
         """
         create a new instance of class cls
