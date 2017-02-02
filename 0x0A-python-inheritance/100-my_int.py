@@ -22,10 +22,14 @@ class MyInt(int):
         """
         !=
         """
-        if super().__eq__(other) return False else return True
+        if super().__eq__(other):
+            return False
+        return True
 
     def __ne__(self, other):
         """
         ==
         """
-        if self.__eq__(other) return False else return True
+        if self.__eq__(other):
+            return False
+        return True
