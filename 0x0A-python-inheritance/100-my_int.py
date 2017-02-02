@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 MyInt challenges us to change the basics of an int
 == is !=
