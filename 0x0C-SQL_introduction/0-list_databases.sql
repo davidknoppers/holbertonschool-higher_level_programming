@@ -1,2 +1,3 @@
 -- basic command to show available databases
-SHOW databases;
+-- that's about it!
+SHOW DATABASES;

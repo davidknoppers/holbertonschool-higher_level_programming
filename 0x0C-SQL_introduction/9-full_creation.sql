@@ -1,4 +1,5 @@
 -- creates a table if it doesn't exist
+-- inserts multiple values into table
 CREATE TABLE IF NOT EXISTS second_table(id INT,
        name VARCHAR(256),
        score INT);

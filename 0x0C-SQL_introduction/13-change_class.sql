@@ -1,3 +1,4 @@
--- list all rows of a table
+-- goes into second table
+-- deletes bad scores
 DELETE FROM second_table
 WHERE `score` <= 5;
