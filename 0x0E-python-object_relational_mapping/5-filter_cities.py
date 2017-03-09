@@ -18,6 +18,6 @@ if __name__ == "__main__":
     result = []
     for row in cursor.fetchall():
         result.append(row[0])
-        print(', '.join(result))
+    print(', '.join(result))
     cursor.close()
     db.close()
