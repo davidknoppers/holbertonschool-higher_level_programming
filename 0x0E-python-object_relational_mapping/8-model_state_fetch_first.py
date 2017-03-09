@@ -2,8 +2,8 @@
 """ Connecting a class to MySQL"""
 
 import sys
-import sqlalchemy
 from sqlalchemy.orm import sessionmaker
+from sqlalchemy import (create_engine)
 from model_state import Base, State
 
 if __name__ == "__main__":
@@ -14,8 +14,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(db)
     session1 = sessionmaker(bind=db)
     session2 = session1
-    try:
-        instance = session2.query(State).first()
+    instance = session2.query(State).first()
+    if instance:
         print("{}: {}".format(instance.id, instance.name))
-    except:
+    else:
         print("Nothing")
