@@ -19,6 +19,6 @@ if __name__ == "__main__":
     for instance in session2.query(State).order_by(State.id).filter(
             State.name.like('%a%')):
         session2.delete(instance)
-    session.commit()
-    session.close()
+    session2.commit()
+    session2.close()
     db.dispose()
