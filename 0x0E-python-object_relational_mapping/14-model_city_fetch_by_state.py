@@ -3,7 +3,7 @@
 Like number 7 for cities
 """
 import sys
-from sqlalchemy import create_engine
+from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 from model_city import City
@@ -17,8 +17,7 @@ if __name__ == "__main__":
     session2 = session1()
 
     for instance in session2.query(State.name, City.id, City.name).filter(
-            State.id == City.state.id).order_by(City, id):
+            State.id == City.state_id).order_by(City.id):
         print("{}: {{}} {}".format(instance[0], instance[1], instance[2]))
-    session2.commit()
     session2.close()
     db.dispose()
