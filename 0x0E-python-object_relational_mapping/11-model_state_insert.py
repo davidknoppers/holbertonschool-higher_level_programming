@@ -18,7 +18,7 @@ if __name__ == "__main__":
     session2 = session1()
 
     add_state = State(name='Louisiana')
-    session2.add(new_state)
+    session2.add(add_state)
     session2.commit()
     for instance in session.query(State).filter(State.name == 'Louisiana'):
         print(instance.id)
