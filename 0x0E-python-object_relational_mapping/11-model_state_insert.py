@@ -20,4 +20,4 @@ if __name__ == "__main__":
     session2.add(la)
     session2.commit()
     instance = session2.query(State).filter_by(name="Louisiana").first()
-    print("{}".format(instance.id()))
+    print("{}".format(instance.id))
