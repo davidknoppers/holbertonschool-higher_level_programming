@@ -4,7 +4,8 @@ if __name__ == "__main__":
     import sys
     import MySQLdb
 
-    db = MySQLdb.connect('localhost', sys.argv[1], sys.argv[2], sys.argv[3])
+    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3],
+                         port=3306, host="localhost")
     cursor = db.cursor()
 
     query = "SELECT id, name FROM states WHERE name LIKE 'N%' ORDER BY id asc;"
@@ -12,6 +13,8 @@ if __name__ == "__main__":
     cursor.execute(query)
 
     for row in cursor.fetchall():
-        print(row)
+        if row[1][0] == "N":
+            print(row)
 
+    cursor.close()
     db.close()
