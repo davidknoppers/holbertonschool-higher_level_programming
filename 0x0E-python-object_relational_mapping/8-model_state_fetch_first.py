@@ -15,7 +15,7 @@ if __name__ == "__main__":
     session1 = sessionmaker(bind=db)
     session2 = session1
     try:
-        instance = sesh2.query(State).first()
+        instance = session2.query(State).first()
         print("{}: {}".format(instance.id, instance.name))
     except:
         print("Nothing")
