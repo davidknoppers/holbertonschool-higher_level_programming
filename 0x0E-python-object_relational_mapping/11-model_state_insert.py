@@ -12,13 +12,12 @@ if __name__ == "__main__":
                                                          sys.argv[2],
                                                          sys.argv[3])
     db = create_engine(engine)
-
     Base.metadata.create_all(db)
     session1 = sessionmaker(bind=db)
     session2 = session1()
 
-    add_state = State(name='Louisiana')
-    session2.add(add_state)
+    la = State(name='Louisiana')
+    session2.add(la)
     session2.commit()
-    instance = session.query(State).filter_by(name="Louisiana").first()
+    instance = session2.query(State).filter_by(name="Louisiana").first()
     print("{}".format(added.id()))
