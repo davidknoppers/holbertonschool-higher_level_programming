@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-# prints states that match a given input
+"""
+prints states that match a given input
+"""
 if __name__ == "__main__":
     import sys
     import MySQLdb
