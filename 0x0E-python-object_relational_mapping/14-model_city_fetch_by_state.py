@@ -18,6 +18,6 @@ if __name__ == "__main__":
 
     for instance in session2.query(State.name, City.id, City.name).filter(
             State.id == City.state_id).order_by(City.id):
-        print("{}: {{}} {}".format(instance[0], instance[1], instance[2]))
+        print("{}: ({}) {}".format(instance[0], instance[1], instance[2]))
     session2.close()
     db.dispose()
