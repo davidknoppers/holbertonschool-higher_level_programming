@@ -10,6 +10,6 @@ if __name__ == "__main__":
         content = response.read()
         content_type = type(content)
         utf_content = content.decode('utf-8')
-        print("\t- type: {}".format(content_type))
+        print("Body response:\n\t- type: {}".format(content_type))
         print("\t- content: {}".format(content))
         print("\t- utf8 content: {}".format(utf_content))
