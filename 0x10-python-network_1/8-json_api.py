@@ -7,13 +7,14 @@ import requests
 import sys
 
 
-try:
-    letter = sys.argv[1]
-except:
-    letter = ""
-url = "http://0.0.0.0:5000/search_user"
-r = requests.post(url, data={"q": letter}).json()
-if r == {}:
-    print("No result")
-else:
-    print("[{}] {}".format(r['id'], r['name']))
+if __name__ == "__main__":
+    try:
+        letter = sys.argv[1]
+    except:
+        letter = ""
+    url = "http://0.0.0.0:5000/search_user"
+    r = requests.post(url, data={"q": letter}).json()
+    if r == {}:
+        print("No result")
+    else:
+        print("[{}] {}".format(r['id'], r['name']))
