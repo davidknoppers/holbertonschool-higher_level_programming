@@ -5,5 +5,6 @@ the value of the X-Request-Id variable found in the header of the response
 """
 import requests
 
-r = requests.get('https://intranet.hbtn.io/status')
-print(r.text)
+if __name__ == "__main__":
+    r = requests.get('https://intranet.hbtn.io/status')
+    print(r.text)
