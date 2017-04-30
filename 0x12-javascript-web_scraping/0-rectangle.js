@@ -1,4 +1,2 @@
 #!/usr/bin/node
-class Rectangle {
-}
-exports.Rectangle = Rectangle;
+exports.Rectangle = function Rectangle () {};
