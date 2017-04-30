@@ -1,0 +1,1 @@
+More introductory JS and our first exercises where we use JS for web scraping
