@@ -3,7 +3,7 @@
 const Square = require('./5-square').Square;
 
 Square.prototype.charPrint = function (c) {
-  var array = [];
+  let array = [];
   if (c === undefined) {
     array = Array(this.width).fill(Array(this.height + 1).join('X'));
   } else {
