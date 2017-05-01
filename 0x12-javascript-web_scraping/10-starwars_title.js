@@ -1,8 +1,8 @@
 #!/usr/bin/node
 
-var request = require('request');
+const request = require('request');
 
-var params = {
+const params = {
   url: 'http://swapi.co/api/films/' + process.argv[2],
   method: 'GET'
 };

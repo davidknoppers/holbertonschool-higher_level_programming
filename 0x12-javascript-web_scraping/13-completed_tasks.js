@@ -1,16 +1,16 @@
 #!/usr/bin/node
 
-var request = require('request');
-var url = process.argv[2];
+let request = require('request');
+let url = process.argv[2];
 
 request(url, function (error, response, body) {
   if (error) {
     console.log(error);
   }
-  var data = JSON.parse(body);
-  var dict = {};
-  for (var item = 0; item < data.length; item++) {
-    var id = data[item]['userId'];
+  let data = JSON.parse(body);
+  let dict = {};
+  for (let item = 0; item < data.length; item++) {
+    let id = data[item]['userId'];
     if (data[item]['completed'] === true) {
       if (dict[id] === undefined) {
         dict[id] = 1;

@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
-var request = require('request');
-var options = {
+const request = require('request');
+const options = {
   url: process.argv[2],
   method: 'GET'
 };
